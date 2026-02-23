@@ -1,0 +1,464 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* Variables */
+:root {
+    --bg-color: #0b1120;
+    --nav-bg: rgba(11, 17, 32, 0.85);
+    --primary-color: #00ffcc;
+    --text-color: #ffffff;
+    --secondary-text: #94a3b8;
+    --card-bg: #1e293b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+span {
+    color: var(--primary-color);
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: var(--nav-bg);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: var(--primary-color);
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* General Sections */
+section {
+    padding: 120px 8% 50px;
+    min-height: 100vh;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--secondary-text);
+    max-width: 600px;
+    margin: 0 auto 50px auto;
+    font-size: 16px;
+}
+
+/* About Section */
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 50px;
+}
+
+.text-box {
+    flex: 1;
+}
+
+.text-box h3 {
+    font-size: 24px;
+    color: var(--secondary-text);
+}
+
+.text-box h1 {
+    font-size: 55px;
+    margin: 10px 0;
+    line-height: 1.2;
+}
+
+.typing-text {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.text-box p {
+    color: var(--secondary-text);
+    margin-bottom: 25px;
+    font-size: 16px;
+}
+
+/* Social Icons */
+.social-icons {
+    margin-bottom: 30px;
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    border-radius: 50%;
+    font-size: 18px;
+    color: var(--primary-color);
+    text-decoration: none;
+    margin-right: 15px;
+    transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+    background: var(--primary-color);
+    color: var(--bg-color);
+    box-shadow: 0 0 15px var(--primary-color);
+    transform: translateY(-3px);
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: var(--primary-color);
+    color: var(--bg-color);
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 30px;
+    transition: 0.3s;
+    box-shadow: 0 0 15px rgba(0, 255, 204, 0.4);
+}
+
+.btn:hover {
+    box-shadow: 0 0 30px var(--primary-color);
+    transform: translateY(-3px);
+}
+
+.outline-btn {
+    background: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.outline-btn:hover {
+    background: var(--primary-color);
+    color: var(--bg-color);
+}
+
+.image-box {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.image-box img {
+    width: 380px;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid var(--card-bg);
+    box-shadow: 0 0 40px rgba(0, 255, 204, 0.3);
+}
+
+/* Clickable Skills Section */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.skill-card {
+    background: var(--card-bg);
+    padding: 40px 30px;
+    border-radius: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.4s;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 255, 204, 0.15);
+    border-color: var(--primary-color);
+}
+
+.skill-card img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+    transition: 0.4s;
+}
+
+.skill-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.skill-details {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+}
+
+/* When Card is Clicked */
+.skill-card.active .skill-details {
+    max-height: 200px;
+    opacity: 1;
+    margin-top: 15px;
+}
+
+.skill-card.active img {
+    transform: scale(0.9);
+}
+
+.skill-details p {
+    font-size: 14px;
+    color: var(--secondary-text);
+    margin-bottom: 15px;
+}
+
+.project-link {
+    display: inline-block;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.project-link i {
+    margin-left: 5px;
+    transition: 0.3s;
+}
+
+.project-link:hover i {
+    transform: translateX(5px);
+}
+
+/* Projects Section */
+/* Projects Section */
+.project-card {
+    background: var(--card-bg);
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(255,255,255,0.05);
+    max-width: 900px;
+    margin: 0 auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    cursor: pointer; /* কার্সর পয়েন্টার করা হয়েছে */
+    transition: 0.4s ease-in-out;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 255, 204, 0.2);
+    border-color: var(--primary-color);
+}
+
+.project-img {
+    position: relative;
+}
+
+.project-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: 0.4s;
+}
+
+/* Hover Overlay */
+.project-img .overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(11, 17, 32, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: var(--primary-color);
+    font-size: 22px;
+    font-weight: 600;
+    opacity: 0;
+    transition: 0.4s ease;
+}
+
+.project-card:hover .project-img .overlay {
+    opacity: 1;
+}
+
+/* Initially hide the project info */
+.project-info {
+    max-height: 0;
+    opacity: 0;
+    padding: 0 40px;
+    overflow: hidden;
+    transition: all 0.6s ease-in-out;
+}
+
+/* When the card is clicked (active state) */
+.project-card.active .project-info {
+    max-height: 1200px; /* বিস্তারিত দেখানোর জন্য স্পেস */
+    opacity: 1;
+    padding: 40px;
+}
+
+.project-card.active .project-img img {
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.project-card.active .project-img .overlay {
+    opacity: 0; /* ক্লিক করার পর লেখা হাইড হয়ে যাবে */
+}
+
+.project-info h3 {
+    font-size: 28px;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.project-info p {
+    color: var(--secondary-text);
+    margin-bottom: 20px;
+}
+
+.project-info h4 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.project-info ul {
+    list-style: none;
+    color: var(--secondary-text);
+}
+
+.project-info ul li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.project-info ul li i {
+    color: var(--primary-color);
+    margin-right: 12px;
+    margin-top: 5px;
+}
+/* Contact Section */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.contact-card {
+    background: var(--card-bg);
+    padding: 40px 50px;
+    border-radius: 15px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    min-width: 300px;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 255, 204, 0.15);
+    border-color: var(--primary-color);
+}
+
+.contact-card.whatsapp:hover {
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.2);
+    border-color: #25D366;
+}
+.contact-card.whatsapp i {
+    color: #25D366;
+}
+
+.contact-card i {
+    font-size: 45px;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #060913;
+    color: var(--secondary-text);
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .image-box img {
+        width: 280px;
+        height: 280px;
+    }
+    .social-icons {
+        justify-content: center;
+        display: flex;
+    }
+    .nav-links {
+        display: none; 
+    }
+    .menu-toggle {
+        display: block;
+    }
+}

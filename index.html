@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeyaul Hoque | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+  <link rel="icon" type="image/png" href="img/IMG.jpg">
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">Jeyaul <span>Hoque</span></div>
+        <ul class="nav-links">
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+    </nav>
+
+    <!-- About Me Section -->
+    <section id="about" class="about-section">
+        <div class="about-content">
+            <div class="text-box">
+                <h3>Hello, I am</h3>
+                <h1>Jeyaul Hoque</h1>
+                <h2 class="typing-text">I am a <span id="typewriter"></span></h2>
+                <p>I am a Computer Science student currently learning programming. My goal is to become a highly skilled developer and build web applications that solve real-world problems. I am passionate about exploring new technologies and continuous learning.</p>
+                
+                <!-- Social Media Links -->
+                <div class="social-icons">
+                    <a href="https://web.facebook.com/jeyaul2026" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://x.com/Jeyaul2025" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://github.com/jeyaulhoquebd" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/jeyaul-hoque-7128a73a7/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+
+                <a href="#contact" class="btn">Contact Me</a>
+            </div>
+            <div class="image-box">
+                <!-- Keep your profile picture here -->
+                <img src="img/IMG.jpg" alt="Jeyaul Hoque">
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <h2 class="section-title">My <span>Skills</span></h2>
+        <p class="section-subtitle">Click on the images below to read about my skills and view related projects.</p>
+        
+        <div class="skills-container">
+            <!-- Skill 1 -->
+            <div class="skill-card" onclick="toggleSkill(this)">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
+                <h3>HTML & CSS</h3>
+                <div class="skill-details">
+                    <p>I can create beautiful, responsive, and well-structured websites using HTML5 and CSS3. I am constantly learning new design patterns.</p>
+                    <a href="#projects" class="project-link">View My Projects <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Skill 2 -->
+            <div class="skill-card" onclick="toggleSkill(this)">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+                <h3>JavaScript</h3>
+                <div class="skill-details">
+                    <p>I use JavaScript to add interactivity and logic to my web projects. I enjoy building dynamic features like Chrome extensions.</p>
+                    <a href="#projects" class="project-link">View JS Projects <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Skill 3 -->
+            <div class="skill-card" onclick="toggleSkill(this)">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="Learning">
+                <h3>Learning New Skills</h3>
+                <div class="skill-details">
+                    <p>As a CS student, I am currently exploring advanced programming concepts and modern web frameworks to enhance my expertise.</p>
+                    <a href="https://github.com/jeyaulhoquebd?tab=repositories" target="_blank" class="project-link">Check my GitHub <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <h2 class="section-title">My <span>Projects</span></h2>
+        <p class="section-subtitle">Click on the project image to view details and source code.</p>
+        
+        <!-- onclick ইভেন্ট যুক্ত করা হয়েছে -->
+        <div class="project-card" onclick="toggleProject(this)">
+            <div class="project-img">
+                <img src="https://github.com/jeyaulhoquebd/focus-mode-time/raw/main/timey2.png" alt="Focus Mode Time Extension">
+                <!-- কিক্ল করার জন্য একটি হিন্ট ওভারলে -->
+                <div class="overlay"><i class="fas fa-hand-pointer"></i> Click for details</div>
+            </div>
+            
+            <!-- এই অংশটুকু প্রথমে লুকানো থাকবে -->
+            <div class="project-info">
+                <h3>Focus Mode Time (Chrome Extension)</h3>
+                <p>Are you struggling to focus on your work? This tool helps you focus on your tasks for a specific period of time with a built-in timer and alarm.</p>
+                
+                <h4>What you'll see in this extension:</h4>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> How to input your work topic (e.g., studying or something else).</li>
+                    <li><i class="fas fa-check-circle"></i> How to set the time it will take for a task.</li>
+                    <li><i class="fas fa-check-circle"></i> How the countdown works after the timer starts.</li>
+                    <li><i class="fas fa-check-circle"></i> How the alarm system works after the task is completed.</li>
+                </ul>
+
+                <h4>Key features:</h4>
+                <ul>
+                    <li><i class="fas fa-star"></i> The convenience of setting a specific time to work.</li>
+                    <li><i class="fas fa-star"></i> Alarm sound option at the end of the time.</li>
+                    <li><i class="fas fa-star"></i> The opportunity to view your work history.</li>
+                </ul>
+                
+                <!-- Project Link -->
+                <a href="https://github.com/jeyaulhoquebd/focus-mode-time" target="_blank" class="btn outline-btn" style="margin-top: 25px;">Source Code</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <h2 class="section-title">Get In <span>Touch</span></h2>
+        <p class="section-subtitle">Feel free to reach out to me for any questions, project ideas, or collaborations.</p>
+        
+        <div class="contact-container">
+            <a href="mailto:jeyaulhoque2025@gmail.com" class="contact-card">
+                <i class="fas fa-envelope"></i>
+                <h3>Email</h3>
+                <p>jeyaulhoque2025@gmail.com</p>
+            </a>
+            <a href="https://wa.me/+8801575029695" target="_blank" class="contact-card whatsapp">
+                <i class="fab fa-whatsapp"></i>
+                <h3>WhatsApp</h3>
+                <p>+8801575029695</p>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Jeyaul Hoque. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
